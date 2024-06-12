@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bookmarking</title>
+    <style>
+        table {
+            width: 45%;
+            float: left;
+            margin-right: 5%;
+            border-collapse: collapse;
+        }
+        th, td {
+            border: 1px solid rgb(105, 51, 150);
+            text-align: left;
+        }
+    </style>
+</head>
+<body>
+    <h1>Bookmarking Example</h1>
+    <table>
+        <thead>
+            <tr>
+                <th>LINKS</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><a href="javascript:void(0);" onclick="showInfo('Virat Kohli (Hindi pronunciation: Virat kohli ; born 5 November 1988) is an Indian international cricketer and the former captain of the Indian national cricket team. He is a right-handed batsman and an occasional medium-fast bowler.')" style="text-decoration: none;">Information 1</a></td>
+            </tr>
+            <tr>
+                <td><a href="javascript:void(0);" onclick="showInfo('Virat Kohli (Hindi pronunciation: Virat kohli  ; born 5 November 1988) is an Indian international cricketer and the former captain of the Indian national cricket team. He is a right-handed batsman and an occasional medium-fast bowler.')" style="text-decoration: none;">Information 2</a></td>
+            </tr>
+            <tr>
+                <td><a href="javascript:void(0);" onclick="showInfo('Information 3')" style="text-decoration: none;">Information 3</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <table id="infoTable">
+        <thead>
+            <tr>
+                <th>Description</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td id="infoContent"></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <script>
+        function showInfo(info) {
+            document.getElementById('infoContent').innerText = info;
+        }
+    </script>
+</body>
+</html>
